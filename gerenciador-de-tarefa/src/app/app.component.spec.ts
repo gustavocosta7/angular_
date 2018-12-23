@@ -1,16 +1,16 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { TestBed, async } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
-describe('AppComponent', () => {
+describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
@@ -28,6 +28,4 @@ describe('AppComponent', () => {
   //   const compiled = fixture.debugElement.nativeElement;
   //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to gerenciador-de-tarefa!');
   // });
-
-
 });
