@@ -11,6 +11,7 @@
         name="valor"
         class="form-control text-right"
         placeholder="0"
+        numero
         [(ngModel)]="conversao.valor"
         required
       />
@@ -46,11 +47,11 @@
       />
     </form>
   </div>
-  <!--  <modal-cotacao
+  <modal-cotacao
     [id]="'modalCotacao'"
     [conversaoResponse]="conversaoResponse"
     [conversao]="conversao"
     (onConfirm)="init()"
   >
-  </modal-cotacao> -->
+  </modal-cotacao>
 </div>
