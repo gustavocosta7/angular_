@@ -9,21 +9,19 @@ import { RouterModule } from '@angular/router';
 export const TarefaRoutes: Routes = [
   {
     path: 'tarefas',
-    component: TarefasRoutingComponent,
-    children: [
-      {
-        path: '',
-        component: ListarTarefasComponent
-      },
-      {
-        path: 'tarefas/cadastrar',
-        component: CadastrarTarefasComponent
-      },
-      {
-        path: 'tarefas/editar/:id',
-        component: EditarTarefasComponent
-      }
-    ]
+    redirectTo: 'tarefas/listar'
+  },
+  {
+    path: 'tarefas/listar',
+    component: ListarTarefasComponent
+  },
+  {
+    path: 'tarefas/cadastrar',
+    component: CadastrarTarefasComponent
+  },
+  {
+    path: 'tarefas/editar/:id',
+    component: EditarTarefasComponent
   }
 ];
 
